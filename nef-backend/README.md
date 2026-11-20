@@ -115,6 +115,12 @@ Render's free web service sleeps after 15 minutes without requests; the
 first request after that takes about a minute. Use a paid instance for real
 users.
 
+**Vercel (no credit card)** instead of Render: vercel.com -> Add New ->
+Project -> import the repo, set **Root Directory** to `nef-backend`, add the
+same environment variables, Deploy. Vercel finds `src/app.js` and runs the
+Express app as a serverless function (`server.js` is not used there; the
+config check runs in `app.js`). The pool size defaults to 3 on Vercel.
+
 **Docker** instead: `docker build -t nef-backend .` then
 `docker run --env-file .env -p 3000:3000 nef-backend`.
 

@@ -85,3 +85,9 @@ promotion.
   free text such as "Carpet weaving helper", so saving it failed. Now
   `VARCHAR(150)` (schema, validator, `db/migrations/002_child_in_labor.sql`;
   the seed script applies it automatically).
+
+## Update: Vercel support
+
+- Backend can run on Vercel's free Hobby plan (no credit card): the startup
+  config check also runs in `src/app.js` when `VERCEL` is set, the MySQL pool
+  defaults to 3 connections there, and `package.json` declares `"type": "commonjs"`.

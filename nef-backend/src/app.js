@@ -1,4 +1,14 @@
-const { config } = require("./config/env");
+const { config, validateConfig } = require("./config/env");
+
+// On Vercel this file is the entry point (src/server.js is not run there),
+// so the same startup configuration check happens here.
+if (process.env.VERCEL) {
+  const problems = validateConfig();
+  if (problems.length) {
+    throw new Error("NEF backend configuration problems: " + problems.join(" "));
+  }
+}
+
 const express = require("express");
 const cors = require("cors");
 const helmet = require("helmet");

@@ -22,7 +22,9 @@ function sslOptions() {
 
 const common = {
   waitForConnections: true,
-  connectionLimit: parseInt(process.env.MYSQL_POOL_SIZE, 10) || 10,
+  // Serverless (Vercel) may run several copies at once, each with its own
+  // pool, so keep each pool small there to stay under the database's limit.
+  connectionLimit: parseInt(process.env.MYSQL_POOL_SIZE, 10) || (process.env.VERCEL ? 3 : 10),
   dateStrings: true,
   ssl: sslOptions()
 };
