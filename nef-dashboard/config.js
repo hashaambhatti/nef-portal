@@ -11,7 +11,7 @@
 //                        localStorage, no backend needed. Never for real users.
 // USE_MOCK_API: false -> real backend (required for production).
 // ---------------------------------------------------------------------------
-const PRODUCTION_API_BASE_URL = "https://YOUR-BACKEND.onrender.com/api";
+const PRODUCTION_API_BASE_URL = "https://nef-backend.vercel.app/api";
 
 const isLocalHost = ["localhost", "127.0.0.1"].includes(window.location.hostname);
 
