@@ -1,0 +1,64 @@
+/* 1. Global Reset & Variables */
+
+:root {
+  --primary: #4F46E5;       /* Indigo 600 */
+  --primary-hover: #4338CA; /* Indigo 700 */
+  --primary-light: #EEF2FF; /* Indigo 50 */
+  --accent: #38BDF8;        /* Sky 400 */
+  --accent-light: #E0F2FE;  /* Sky 50 */
+  
+  --bg-app: #F8FAFC;        /* Slate 50 */
+  --bg-card: #FFFFFF;
+  --bg-sidebar: #312E81;    /* Deep Indigo 900 */
+  
+  --text-primary: #0F172A;  /* Slate 900 */
+  --text-secondary: #64748B;/* Slate 500 */
+  --text-muted: #94a3b8;    /* Slate 400 */
+  --text-white: #FFFFFF;
+
+  --border: #E2E8F0;        /* Slate 200 */
+  --border-focus: #4F46E5;
+  
+  --success: #10B981;       /* Emerald 500 */
+  --success-light: #ECFDF5;
+  --danger: #EF4444;        /* Red 500 */
+  --danger-light: #FEF2F2;
+  --warning: #F59E0B;       /* Amber 500 */
+  --warning-light: #FEF3C7;
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.03), 0 2px 4px -2px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.03), 0 4px 6px -4px rgba(0, 0, 0, 0.03);
+  
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  
+  --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --sidebar-width: 260px;
+  --topbar-height: 70px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+}

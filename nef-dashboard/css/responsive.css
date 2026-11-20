@@ -1,0 +1,59 @@
+/* 9. Responsive Layout Adjustments */
+@media (max-width: 1024px) {
+  :root {
+    --sidebar-width: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  
+  .sidebar.active {
+    transform: translateX(0);
+  }
+  
+  .main-wrapper {
+    margin-left: 0;
+  }
+  
+  .menu-toggle {
+    display: block;
+  }
+  
+  .widgets-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .topbar-user-info {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .widgets-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .content-body {
+    padding: 1rem;
+  }
+  
+  .topbar {
+    padding: 0 1rem;
+  }
+  
+  .actions-bar {
+    padding: 0.75rem 1rem;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}

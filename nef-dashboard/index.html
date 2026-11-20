@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Security: only load scripts/styles from this site, only talk to this
+       site and HTTPS APIs (plus the local backend during development), no
+       plugins. 'unsafe-inline' is still needed for the onclick="..."
+       handlers in the page templates. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' https: http://localhost:3000 http://127.0.0.1:3000; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  
+  <!-- SEO Meta Tags -->
+  <title>NEF School Information System</title>
+  <meta name="description" content="National Education Foundation frontend portal for school administration, student registries, teacher profiles, and attendance tracking.">
+  
+  <!-- Modular CSS Stylesheets -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Root Mounting Container -->
+  <div id="app">
+    <div style="height: 100vh; display: flex; align-items: center; justify-content: center; font-family: sans-serif; color: #475569; background-color: #f8fafc;">
+      <div style="text-align: center;">
+        <h3 style="margin-bottom: 0.5rem; font-weight: 600;">Loading School Portal...</h3>
+        <p style="font-size: 0.875rem;">Please wait a moment.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Configuration -->
+  <script src="config.js"></script>
+
+  <!-- Lucide Icons -->
+  <script src="js/vendor/lucide.min.js"></script>
+  
+  <!-- Boundary Services -->
+  <script src="js/api/mockData.js"></script>
+  <script src="js/api/httpClient.js"></script>
+  <script src="js/api/authService.js"></script>
+  <script src="js/api/studentService.js"></script>
+  <script src="js/api/teacherService.js"></script>
+  <script src="js/api/schoolService.js"></script>
+  <script src="js/api/attendanceService.js"></script>
+
+  <!-- Core Libraries -->
+  <script src="js/core/state.js"></script>
+  <script src="js/core/constants.js"></script>
+  <script src="js/core/utils.js"></script>
+
+  <!-- Reusable UI Component Libraries -->
+  <script src="js/components/tables.js"></script>
+  <script src="js/components/pagination.js"></script>
+  <script src="js/components/modal-shell.js"></script>
+  <script src="js/components/charts.js"></script>
+
+  <!-- Page Modules -->
+  <script src="js/pages/auth.js"></script>
+  <script src="js/pages/dashboard.js"></script>
+  <script src="js/pages/students.js"></script>
+  <script src="js/pages/teachers.js"></script>
+  <script src="js/pages/schools.js"></script>
+  <script src="js/pages/enroll-student.js"></script>
+  <script src="js/pages/attendance.js"></script>
+  <script src="js/pages/promotion.js"></script>
+  <script src="js/pages/profile.js"></script>
+
+  <!-- Router -->
+  <script src="js/core/router.js"></script>
+
+  <!-- Bootstrap Application -->
+  <script src="js/app.js"></script>
+
+</body>
+</html>
